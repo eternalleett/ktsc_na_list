@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTSC User Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/topbar.css">
+    <link rel="stylesheet" href="../CSS/data.css">
+</head>
+<body>
+    <section id="topnav">
+        <header role="banner">
+            <div class="topnav">
+            <a href="calendar.html">Home</a>
+            <a href="NA.html">NA</a>
+            <a class="active" href="data.html">Data</a>
+            <h1 class="text">KTSC NA</h1>
+            </div>
+        </header>
+    </section>
+
+    <section id="data">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>User Attendance Data</h2> 
+                    <button id="toggleViewBtn" class="btn btn-primary">Switch to Chart View</button>                   
+                    <div id="tableView" class="mt-4"></div>
+                    <div id="chartView" class="mt-4" style="display: none;">
+                        <canvas id="attendanceChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="yearSelect">Select Year:</label>
+                        <select id="yearSelect" class="form-control"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="monthSelect">Select Month:</label>
+                        <select id="monthSelect" class="form-control"></select>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../JS/database.js"></script>
+    <script src="../JS/data.js"></script>
+</body>
+</html>

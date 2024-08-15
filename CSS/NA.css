@@ -1,0 +1,20 @@
+.calendar-container {
+    
+    font-size: 0.8rem;
+    width: 100%; /* Ensure it's taking full width */
+    max-width: 1200px; /* Increase max-width as needed */
+    margin-top: 20px;
+    margin-left: 0; /* Centering the container */
+    margin-right: auto; /* Centering the container */
+    transition: margin-left 0.3s; /* Add transition effect */
+
+}
+
+.calendar-container h2 {
+    margin-bottom: 20px;
+}
+
+.calendar-container table {
+    width: 100%; /* Table takes full width of its container */
+}
+

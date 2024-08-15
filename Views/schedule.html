@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule a Class</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/topbar.css">
+    <link rel="stylesheet" href="../CSS/schedule.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <section id="topnav">
+        <header role="banner">
+            <div class="topnav">
+                <a href="calendar.html">Home</a>
+                <a href="NA.html">NA</a>
+                <a href="data.html">Data</a>
+                <a class="active" href="schedule.html">Schedule</a>
+                <h1 class="text">KTSC Schedule</h1>
+            </div>
+        </header>
+    </section>
+
+    <section id="schedule">
+        <div class="container mt-4">
+            <h2>Schedule a Class</h2>
+            <form id="scheduleForm">
+                <div class="form-group">
+                    <label for="classType">Type of Class:</label>
+                    <select id="classType" class="form-control" required>
+                        <option value="BM">BM</option>
+                        <option value="PLGA">PLGA</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="className">Name of Class:</label>
+                    <input type="text" id="className" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="classStartDate">Start Date of Class:</label>
+                    <input type="date" id="classStartDate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="classEndDate">End Date of Class:</label>
+                    <input type="date" id="classEndDate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="examDate">Date of Exam:</label>
+                    <input type="date" id="examDate" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="coaches">Coach:</label>
+                    
+                    <div id="selectedCoaches" class="mb-2"></div>
+                        <select data-placeholder="Begin typing a name to filter..." multiple class="chosen-select" id="coaches">
+                            <!-- Options will be populated dynamically -->
+                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="assistantCoaches">Assistant Coach:</label>
+                    <div id="selectedAssistantCoaches" class="mb-2"></div>
+                    <select id="assistantCoaches" class="form-control"multiple >
+                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="numStudents">Number of Students:</label>
+                    <input type="number" id="numStudents" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Schedule Class</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../JS/database.js"></script>
+    <script src="../JS/schedule.js"></script>
+</body>
+</html>
